@@ -1,7 +1,7 @@
 {
-  "name": "@carforyou/example",
+  "name": "@carforyou/pika-plugin-build-standalone-node",
   "version": "0.0.0",
-  "description": "Example package",
+  "description": "Generates a node bundle for a separate source file with pika/pack",
   "scripts": {
     "version": "npm run build",
     "build": "pika build",
@@ -13,11 +13,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/autoricardo/carforyou-example-pkg.git"
+    "url": "git+https://github.com/carforyou/pika-plugin-build-standalone-node-pkg.git"
   },
   "author": "CAR FOR YOU",
   "license": "MIT",
-  "homepage": "https://github.com/autoricardo/example-pkg#readme",
+  "homepage": "https://github.com/carforyou/pika-plugin-build-standalone-node-pkg#readme",
+  "dependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/plugin-syntax-import-meta": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
+    "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
+    "builtin-modules": "^3.1.0",
+    "@pika/types": "^0.8.1",
+    "rollup": "^1.29.0",
+    "rollup-plugin-babel": "^4.3.3"
+  },
   "devDependencies": {
     "@carforyou/tslint-rules": "^1.1.0",
     "@pika/pack": "^0.5.0",
