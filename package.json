@@ -1,7 +1,7 @@
 {
-  "name": "@carforyou/example",
+  "name": "@carforyou/pika-plugin-build-standalone-node",
   "version": "0.0.0",
-  "description": "Example package",
+  "description": "Generates a node bundle for a separate source file with pika/pack",
   "scripts": {
     "version": "npm run build",
     "build": "pika build",
@@ -13,20 +13,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/autoricardo/carforyou-example-pkg.git"
+    "url": "git+https://github.com/autoricardo/carforyou-pika-plugin-build-standalone-node-pkg.git"
   },
   "author": "CAR FOR YOU",
   "license": "MIT",
-  "homepage": "https://github.com/autoricardo/example-pkg#readme",
+  "homepage": "https://github.com/autoricardo/pika-plugin-build-standalone-node-pkg#readme",
   "devDependencies": {
+    "@babel/plugin-syntax-dynamic-import": "^7.7.4",
+    "@babel/plugin-syntax-import-meta": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
     "@carforyou/tslint-rules": "^1.1.0",
     "@pika/pack": "^0.5.0",
     "@pika/plugin-build-node": "^0.8.1",
     "@pika/plugin-build-web": "^0.8.1",
     "@pika/plugin-ts-standard-pkg": "^0.8.1",
+    "@pika/types": "^0.8.1",
     "@types/jest": "^24.0.25",
+    "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
+    "builtin-modules": "^3.1.0",
     "jest": "^24.9.0",
     "prettier": "^1.19.1",
+    "rollup": "^1.29.0",
+    "rollup-plugin-babel": "^4.3.3",
     "semantic-release": "^15.14.0",
     "ts-jest": "^24.3.0",
     "tslint": "^5.20.1",
