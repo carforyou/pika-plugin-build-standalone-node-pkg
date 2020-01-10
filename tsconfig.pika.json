@@ -5,6 +5,6 @@
     "moduleResolution": "node",
     "esModuleInterop": true
   },
-  "include": ["src/index.ts", "src/node.ts"],
+  "include": ["src/index.ts"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
