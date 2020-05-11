@@ -44,7 +44,7 @@ export async function beforeJob({ out }: BuilderOptions) {
 export async function build({
   out,
   reporter,
-  options
+  options,
 }: BuilderOptions): Promise<void> {
   const outFile = path.join(out, "dist-node", "index.js")
   const srcFile = path.join(out, "dist-src", "node.js")
@@ -62,18 +62,18 @@ export async function build({
             {
               modules: false,
               targets: {
-                node: options.minNodeVersion || DEFAULT_MIN_NODE_VERSION
+                node: options.minNodeVersion || DEFAULT_MIN_NODE_VERSION,
               },
-              spec: true
-            }
-          ]
+              spec: true,
+            },
+          ],
         ],
         plugins: [
           babelPluginDynamicImport,
           babelPluginDynamicImportSyntax,
-          babelPluginImportMetaSyntax
-        ]
-      })
+          babelPluginImportMetaSyntax,
+        ],
+      }),
     ],
     onwarn: ((warning, defaultOnWarnHandler) => {
       // Unresolved external imports are expected
@@ -84,14 +84,14 @@ export async function build({
         return
       }
       defaultOnWarnHandler(warning)
-    }) as any
+    }) as any,
   })
 
   await result.write({
     file: outFile,
     format: "cjs",
     exports: "named",
-    sourcemap: options.sourcemap === undefined ? true : options.sourcemap
+    sourcemap: options.sourcemap === undefined ? true : options.sourcemap,
   })
   reporter.created(outFile, "main")
 }
