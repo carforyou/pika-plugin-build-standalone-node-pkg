@@ -21,12 +21,12 @@
   "dependencies": {
     "@babel/plugin-syntax-dynamic-import": "^7.7.4",
     "@babel/plugin-syntax-import-meta": "^7.7.4",
-    "@babel/preset-env": "^7.7.7",
+    "@babel/preset-env": "^7.9.6",
+    "@pika/types": "^0.9.0",
     "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
     "builtin-modules": "^3.1.0",
-    "@pika/types": "^0.9.0",
-    "rollup": "^1.29.0",
-    "rollup-plugin-babel": "^4.3.3"
+    "rollup": "^1.32.1",
+    "rollup-plugin-babel": "^4.4.0"
   },
   "devDependencies": {
     "@carforyou/tslint-rules": "^3.0.0",
@@ -34,13 +34,13 @@
     "@pika/plugin-build-node": "^0.9.0",
     "@pika/plugin-build-web": "^0.9.0",
     "@pika/plugin-ts-standard-pkg": "^0.9.0",
-    "@types/jest": "^25.0.0",
+    "@types/jest": "^25.2.3",
     "jest": "^26.0.0",
     "prettier": "^2.0.5",
     "semantic-release": "^15.14.0",
-    "ts-jest": "^24.3.0",
+    "ts-jest": "^26.0.0",
     "tslint": "^5.20.1",
-    "typescript": "^3.7.4"
+    "typescript": "^3.9.3"
   },
   "@pika/pack": {
     "pipeline": [
