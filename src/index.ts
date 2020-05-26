@@ -10,12 +10,12 @@ import rollupBabel from "rollup-plugin-babel"
 import { BuilderOptions, MessageError } from "@pika/types"
 import { rollup } from "rollup"
 
-const DEFAULT_ENTRYPOINT = "main"
-const DEFAULT_MIN_NODE_VERSION = "8"
+const defaultEntrypoint = "main"
+const defaultMinNodeVersion = "8"
 
 export function manifest(manif, { options }: BuilderOptions) {
   if (options.entrypoint !== null) {
-    let keys = options.entrypoint || [DEFAULT_ENTRYPOINT]
+    let keys = options.entrypoint || [defaultEntrypoint]
     if (typeof keys === "string") {
       keys = [keys]
     }
@@ -62,7 +62,7 @@ export async function build({
             {
               modules: false,
               targets: {
-                node: options.minNodeVersion || DEFAULT_MIN_NODE_VERSION,
+                node: options.minNodeVersion || defaultMinNodeVersion,
               },
               spec: true,
             },
@@ -75,7 +75,7 @@ export async function build({
         ],
       }),
     ],
-    onwarn: ((warning, defaultOnWarnHandler) => {
+    onwarn: (warning, defaultOnWarnHandler) => {
       // Unresolved external imports are expected
       if (
         warning.code === "UNRESOLVED_IMPORT" &&
@@ -84,7 +84,7 @@ export async function build({
         return
       }
       defaultOnWarnHandler(warning)
-    }) as any,
+    },
   })
 
   await result.write({
