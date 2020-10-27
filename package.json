@@ -25,6 +25,7 @@
     "@pika/types": "^0.9.0",
     "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
     "builtin-modules": "^3.1.0",
+    "es-abstract": "^1.18.0-next.1",
     "rollup": "^2.0.0",
     "rollup-plugin-babel": "^4.4.0"
   },
