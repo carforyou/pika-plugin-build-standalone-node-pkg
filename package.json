@@ -7,9 +7,7 @@
     "build": "pika build",
     "lint": "eslint --ext ts,js,tsx,jsx,json .",
     "format": "npm run lint -- --fix",
-    "typecheck": "tsc --noEmit",
-    "test": "jest",
-    "test:debug": "node --inspect-brk --inspect=127.0.0.1:9229 ./node_modules/jest/bin/jest.js --runInBand"
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -35,10 +33,7 @@
     "@pika/plugin-build-node": "^0.9.0",
     "@pika/plugin-build-web": "^0.9.0",
     "@pika/plugin-ts-standard-pkg": "^0.9.0",
-    "@types/jest": "^26.0.10",
-    "jest": "^26.4.2",
     "semantic-release": "^17.0.0",
-    "ts-jest": "^26.3.0",
     "typescript": "^4.0.0"
   },
   "@pika/pack": {
