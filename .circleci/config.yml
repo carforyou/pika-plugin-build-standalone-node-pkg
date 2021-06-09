@@ -25,7 +25,8 @@ jobs:
           root: ~/
           paths:
             - project
-      - slack/notify-on-failure
+      - slack/notify-on-failure:
+          only_for_branches: master
 
   lint:
     <<: *DOCKER_NODE
@@ -34,7 +35,8 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: npm run lint
-      - slack/notify-on-failure
+      - slack/notify-on-failure:
+          only_for_branches: master
 
   typecheck:
     <<: *DOCKER_NODE
@@ -45,7 +47,8 @@ jobs:
       - run:
           command: npm run typecheck
           no_output_timeout: 1m
-      - slack/notify-on-failure
+      - slack/notify-on-failure:
+          only_for_branches: master
 
   build:
     <<: *DOCKER_NODE
@@ -57,7 +60,8 @@ jobs:
           root: ~/
           paths:
             - project
-      - slack/notify-on-failure
+      - slack/notify-on-failure:
+          only_for_branches: master
 
   release:
     <<: *DOCKER_NODE
@@ -65,7 +69,8 @@ jobs:
       - attach_workspace:
           at: ~/
       - run: npx semantic-release
-      - slack/notify-on-failure
+      - slack/notify-on-failure:
+          only_for_branches: master
 
 workflows:
   version: 2
